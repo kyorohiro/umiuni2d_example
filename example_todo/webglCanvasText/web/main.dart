@@ -6,6 +6,10 @@ import 'package:umiuni2d/tinyutil_webgl.dart' as tiny;
 
 main() async {
   DivElement output = querySelector('#output');
-  ImageElement canvas = await tiny.ImageUtil.makeImage("xxxxxx Game xxxxxx aaaaaa Game bbbbbb");
+  CanvasElement  canvas = await tiny.CanvasElementText.makeImage("xxxxxx Game xxxxxx aaaaaa Game bbbbbb",align:tiny.CanvasElementTextAlign.left_top);
+
+//  CanvasElement  canvas = await tiny.CanvasElementText.makeImage("xxxxxx Game xxxxxx" +" aaaaaa Game bbbbbb");
+  canvas.style.backgroundColor = "#333333";
+
   output.children.add(canvas);
 }
