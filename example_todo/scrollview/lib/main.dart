@@ -12,7 +12,6 @@ import 'package:flutter/painting.dart';
 
 void main() {
   runApp(new GameWidget());
-  TextPainter p;
 }
 
 class GameWidget extends OneChildRenderObjectWidget {

@@ -4,14 +4,10 @@ description: A starting point for Dart libraries or applications.
 environment:
   sdk: '>=1.0.0 <2.0.0'
 dependencies:
-  benchmark_harness: any
   browser: '>=0.10.0 <0.11.0'
+  dart_to_js_script_rewriter: '^0.1.0'
   umiuni2d:
     path: ../../../umiuni2d/
-  dart_to_js_script_rewriter: ^0.1.0
-  flutter: any
-  sky: any
-  sky_tools: any
   vector_math: any
   flutter:
     path: /Users/kyorohiro/tools/git/flutter/packages/flutter

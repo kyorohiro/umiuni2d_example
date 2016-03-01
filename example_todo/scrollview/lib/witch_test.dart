@@ -18,13 +18,35 @@ class GameRoot extends LittleUIObject {
 
 class MyListViewInfo extends LittleUIScrollerInfo {
   LittleUIObject target;
+  int xx = 20;
+  int yy = 20;
+
   double get top => 0.0;
   double get left => 0.0;
-  double get right => 100.0;
-  double get bottom => 100.0 * 10;
+  double get right => 100.0 * xx;
+  double get bottom => 100.0 * yy;
   int get count => 10;
   void onAttach(LittleUIScroller parent) {
-
+    for(int i=0;i<yy;i++){
+      for(int j=0;j<xx;j++) {
+        LittleUIObject obj;
+        int a = 0xaa;
+        if (j % 3 == 1) {
+          a=0x33;
+        } else if (j % 3 == 2) {
+          a=0x66;
+        }
+        if (i % 3 == 0) {
+          obj = new LittleUIObject(100.0, 100.0, backgroundColor: new TinyColor.argb(0xff, 0xff, a, a));
+        } else if (i % 3 == 1) {
+          obj = new LittleUIObject(100.0, 100.0, backgroundColor: new TinyColor.argb(0xff, a, 0xff, a));
+        } else {
+          obj = new LittleUIObject(100.0, 100.0, backgroundColor: new TinyColor.argb(0xff, a, a, 0xff));
+        }
+        obj.mat.translate(j*100.0, i * 100.0, 0.0);
+        parent.body.addChild(obj);
+      }
+    }
   }
   LittleUIObject getIndex(int i) {
     LittleUIObject obj;
@@ -44,20 +66,13 @@ class MyListViewInfo extends LittleUIScrollerInfo {
   List<LittleUIObject> updateInRange(TinyDisplayObject body, TinyDisplayObject topLayer,  double left, double top, double right, double bottom) {
     int i= -top~/100-1;
     int j= -bottom~/100+1;
+    /*
     body.clearChild();
-    print("######sa## ${i} ${j}");
     for(int x=i;x<j;x++) {
       if(x<0) {
         continue;
       }
       body.addChild(getIndex(x));
-    }
-    /*
-    for(int x=0;x<10;x++) {
-      if(x<0) {
-        continue;
-      }
-      cont.addChild(getIndex(x));
     }*/
     return [];
   }
