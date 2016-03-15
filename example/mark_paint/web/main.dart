@@ -1,5 +1,5 @@
 import 'package:umiuni2d/tinygame.dart';
-import 'package:umiuni2d/tinygame_webgl.dart';
+import 'package:umiuni2d.webgl/tinygame_webgl.dart';
 import 'package:mark_paint/mark_paint.dart';
 
 void main() {
