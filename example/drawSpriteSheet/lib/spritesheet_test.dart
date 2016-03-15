@@ -37,6 +37,7 @@ class SpriteSheetTest extends TinyDisplayObject {
     canvas.pushMulMatrix(new Matrix4.identity()..translate(50.0, 0.0, 0.0));
     TinyPaint paint =
         new TinyPaint(color: new TinyColor.argb(0xaa, 0xff, 0xaa, 0xaa));
+//        new TinyPaint(color: new TinyColor.argb(0xaa, 0xff, 0xff, 0xff));
     if (image != null) {
       canvas.drawImageRect(stage, image, spriteInfo.frames[index].srcRect,
           spriteInfo.frames[index].dstRect, paint);
