@@ -6,9 +6,13 @@ environment:
 dependencies:
   browser: '>=0.10.0 <0.11.0'
   dart_to_js_script_rewriter: '^0.1.0'
-  umiuni2d:
-    path: ../../../umiuni2d/
   vector_math: any
+  umiuni2d:
+    path: ../../../umiuni2d/core
+  umiuni2d.flutter:
+    path: ../../../umiuni2d/flutter
+  umiuni2d.webgl:
+    path: ../../../umiuni2d/webgl
   flutter:
     path: /Users/kyorohiro/tools/git/flutter/packages/flutter
 dev_dependencies:

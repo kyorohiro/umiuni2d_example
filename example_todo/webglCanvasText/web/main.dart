@@ -2,7 +2,7 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'dart:html';
-import 'package:umiuni2d/tinyutil_webgl.dart' as tiny;
+import 'package:umiuni2d.webgl/tinyutil_webgl.dart' as tiny;
 
 main() async {
   DivElement output = querySelector('#output');
