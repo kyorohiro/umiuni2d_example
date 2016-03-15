@@ -1,6 +1,6 @@
 import 'dart:math' as  math;
 import 'package:umiuni2d/tinygame.dart';
-import 'package:umiuni2d/tinygame_webgl.dart';
+import 'package:umiuni2d.webgl/tinygame_webgl.dart';
 import 'package:vector_math/vector_math_64.dart';
 import 'package:locale_test/locale_test.dart';
 
