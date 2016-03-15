@@ -6,7 +6,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/rendering.dart';
 import 'package:umiuni2d/tinygame.dart';
-import 'package:umiuni2d/tinygame_flutter.dart';
+import 'package:umiuni2d.flutter/tinygame_flutter.dart';
 import 'test.dart';
 import 'dart:async';
 
@@ -14,9 +14,11 @@ void main() {
   runApp(new GameWidget());
 }
 
-class GameWidget extends OneChildRenderObjectWidget {
+class GameWidget extends SingleChildRenderObjectWidget {
   GameWidget() {}
-  RenderObject createRenderObject() {
+
+  @override
+  RenderObject createRenderObject(BuildContext context) {
     TinyGameBuilderForFlutter builder = new TinyGameBuilderForFlutter(assetsRoot:"web/");
     builder.useTestCanvas = true;
     TinyGameRoot root = new TinyGameRoot(450.0, 450.0,bkcolor:new TinyColor.argb(0xaa, 0x00, 0x00, 0x00));

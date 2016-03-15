@@ -1,6 +1,5 @@
 library gamelogic;
 
-import 'dart:async';
 import 'dart:math' as math;
 import 'package:umiuni2d/tinygame.dart';
 import 'package:umiuni2d/tinyphysics2d.dart';
