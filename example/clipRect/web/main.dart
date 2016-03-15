@@ -1,5 +1,5 @@
 import 'package:umiuni2d/tinygame.dart';
-import 'package:umiuni2d/tinygame_webgl.dart';
+import 'package:umiuni2d.webgl/tinygame_webgl.dart';
 import 'package:clip_rect/clip_rect.dart';
 
 void main() {
