@@ -14,6 +14,11 @@ https://github.com/kyorohiro/umiuni2d
   http://maoudamashii.jokersounds.com/music_rule.html
 ### se_maoudamashii_retro01-06.ogg has following license.
   http://maoudamashii.jokersounds.com/music_rule.html
+
+## Aclonica.ttf
+  https://github.com/google/fonts/blob/master/apache/aclonica/Aclonica.ttf
+
+
 ### Other
 <p xmlns:dct="http://purl.org/dc/terms/">
   <a rel="license"
