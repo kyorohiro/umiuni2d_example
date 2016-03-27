@@ -14,5 +14,9 @@ dependencies:
     path: ../../../umiuni2d/core
   umiuni2d.webgl:
     path: ../../../umiuni2d/webgl
+  umiuni2d.flutter:
+    path: ../../../umiuni2d/flutter
+  flutter:
+    path: /Users/kyorohiro/tools/git/flutter/packages/flutter
 transformers:
 - dart_to_js_script_rewriter
