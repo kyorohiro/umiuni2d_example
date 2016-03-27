@@ -1,17 +1,17 @@
 import 'package:umiuni2d/tinygame.dart';
 import 'package:umiuni2d.flutter/tinygame_flutter.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
-import 'dart:ui' as sky;
-import 'dart:math' as math;
+import 'package:textobject_test/demo.dart';
 
 main() async {
   runApp(new GameWidget());
 }
 
 class GameWidget extends SingleChildRenderObjectWidget {
-  GameWidget() {}
+  GameWidget() {
+    ;
+  }
 
   @override
   RenderObject createRenderObject(BuildContext context) {
@@ -22,7 +22,7 @@ class GameWidget extends SingleChildRenderObjectWidget {
     TinyStage stage = builder.createStage(root);
     stage.start();
     print("-----aaaa---");
-    stage.root.addChild(new TinyFlutterTextObject("abc",300.0,300.0,fontFamily: "Aclonica"));
+    stage.root.addChild(new GameRoot(builder));
     return (stage as TinyFlutterStage);
   }
 }

@@ -1,4 +1,4 @@
-name: umiuni2d checked
+name: textobject_test
 uses-material-design: true
 assets:
   - web/assets/Aclonica.ttf
