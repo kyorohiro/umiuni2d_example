@@ -1,0 +1,8 @@
+name: umiuni2d checked
+uses-material-design: true
+assets:
+  - web/assets/Aclonica.ttf
+fonts:
+  - family: Aclonica
+    fonts:
+       - asset: web/assets/Aclonica.ttf
