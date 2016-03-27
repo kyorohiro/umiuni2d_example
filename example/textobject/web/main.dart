@@ -3,11 +3,15 @@
 
 import 'package:umiuni2d/tinygame.dart';
 import 'package:umiuni2d.webgl/tinygame_webgl.dart';
+import 'package:umiuni2d.webgl/tinyutil_webgl.dart';
 import 'package:textobject_test/demo.dart';
-import 'dart:async';
-
 main() async {
-//  await new Future.delayed(new Duration(milliseconds: 2800));
+  print("###     A");
+  await CanvasElementText.waitForWebFont(["Aclonica"]);
+  print("###     B");
+
+  //
+  //  await new Future.delayed(new Duration(milliseconds: 2800));
   TinyGameBuilder builder = new TinyGameBuilderForWebgl();
   TinyGameRoot root = new TinyGameRoot(400.0, 300.0);
   root.addChild(new GameRoot(builder));
