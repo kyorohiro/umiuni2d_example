@@ -11,7 +11,7 @@ class GameRoot extends TinyDisplayObject {
   }
 
   void onAttach(TinyStage stage, TinyDisplayObject parent) {
-    text.updateText().then((_) async {
+    text.updateLayout().then((_) async {
 //      await new Future.delayed(new Duration(seconds: 2));
       stage.markPaintshot();
     });
