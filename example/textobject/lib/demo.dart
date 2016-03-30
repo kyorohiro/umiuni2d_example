@@ -1,4 +1,5 @@
 import 'package:umiuni2d/tinygame.dart';
+import 'dart:async';
 
 class GameRoot extends TinyDisplayObject {
   TinyGameBuilder builder;
@@ -10,10 +11,19 @@ class GameRoot extends TinyDisplayObject {
     addChild(text);
   }
 
+  tic(TinyStage stage) async {
+    await text.updateLayout();
+    await stage.markPaintshot();
+    List<String> vs = ["abc", "abcdef"];
+    for (String v in vs) {
+      await new Future.delayed(new Duration(milliseconds: 800));
+      text.text = v;
+      await text.updateLayout();
+      await stage.markPaintshot();
+    }
+  }
+
   void onAttach(TinyStage stage, TinyDisplayObject parent) {
-    text.updateLayout().then((_) async {
-//      await new Future.delayed(new Duration(seconds: 2));
-      stage.markPaintshot();
-    });
+    tic(stage);
   }
 }
