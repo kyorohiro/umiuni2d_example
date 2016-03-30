@@ -25,7 +25,7 @@ class GameWidget extends SingleChildRenderObjectWidget {
     TinyStage stage = builder.createStage(root);
     root.stage = stage;
 
-    //stage.start();
+    stage.start();
     return (stage as TinyFlutterStage);
   }
 }

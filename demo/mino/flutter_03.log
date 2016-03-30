@@ -1,0 +1,93 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run --checked --debug-port=16225 --start-paused --device-id 00c887e085c82514
+
+## exception
+
+Exit code 1 from: /usr/local/opt/android-sdk/build-tools/23.0.2/aapt package -M android/AndroidManifest.xml -A /var/folders/3t/zlz70phs7gs0yr_xg__f36j00000gn/T/flutter_tools2b5QUt/assets -I /usr/local/opt/android-sdk/platforms/android-23/android.jar -F /var/folders/3t/zlz70phs7gs0yr_xg__f36j00000gn/T/flutter_tools2b5QUt/app.apk.unaligned -S /Users/kyorohiro/git/umiuni2d_example/demo/mino/android/res /var/folders/3t/zlz70phs7gs0yr_xg__f36j00000gn/T/flutter_tools2b5QUt/artifacts
+
+package:flutter_tools/src/base/process.dart 138                   _runWithLoggingSync
+package:flutter_tools/src/base/process.dart 81                    runCheckedSync
+package:flutter_tools/src/commands/build_apk.dart 100             _ApkBuilder.package
+package:flutter_tools/src/commands/build_apk.dart 293             _buildApk
+package:flutter_tools/src/commands/build_apk.dart 443             buildAndroid.<async>
+dart:async                                                        _SyncCompleter.complete
+package:flutter_tools/src/flx.dart 192                            buildFlx.<async>
+dart:async                                                        _SyncCompleter.complete
+package:flutter_tools/src/flx.dart 342                            assemble.<async>
+===== asynchronous gap ===========================
+dart:async                                                        _Completer.completeError
+package:flutter_tools/src/commands/build_apk.dart 449             buildAndroid.<async>
+dart:async                                                        _SyncCompleter.complete
+package:flutter_tools/src/flx.dart 192                            buildFlx.<async>
+dart:async                                                        _SyncCompleter.complete
+package:flutter_tools/src/flx.dart 342                            assemble.<async>
+===== asynchronous gap ===========================
+dart:async                                                        _asyncThenWrapperHelper
+package:flutter_tools/src/commands/build_apk.dart                 buildAndroid
+package:flutter_tools/src/commands/build_apk.dart 483             build.<async>
+===== asynchronous gap ===========================
+dart:async                                                        Future.Future.microtask
+package:flutter_tools/src/commands/build_apk.dart                 build
+package:flutter_tools/src/commands/build_apk.dart 463             buildForDevice.<async>
+===== asynchronous gap ===========================
+dart:async                                                        Future.Future.microtask
+package:flutter_tools/src/commands/build_apk.dart                 buildForDevice
+package:flutter_tools/src/commands/run.dart 185                   startApp.<async>
+===== asynchronous gap ===========================
+dart:async                                                        Future.Future.microtask
+package:flutter_tools/src/commands/run.dart                       startApp
+package:flutter_tools/src/commands/run.dart 115                   RunCommand.runInProject.<async>
+dart:async                                                        _SyncCompleter.complete
+package:flutter_tools/src/runner/flutter_command.dart 67          FlutterCommand.downloadApplicationPackages.<async>
+dart:async                                                        _SyncCompleter.complete
+package:flutter_tools/src/application_package.dart 141            ApplicationPackageStore.forConfigs.<async>
+===== asynchronous gap ===========================
+dart:async                                                        _asyncThenWrapperHelper
+package:flutter_tools/src/commands/run.dart                       RunCommand.runInProject
+package:flutter_tools/src/runner/flutter_command.dart 129         FlutterCommand._run.<async>
+dart:async                                                        _SyncCompleter.complete
+package:flutter_tools/src/dart/pub.dart 46                        pubGet.<async>
+===== asynchronous gap ===========================
+dart:async                                                        _asyncThenWrapperHelper
+package:flutter_tools/src/runner/flutter_command.dart             FlutterCommand._run
+package:flutter_tools/src/runner/flutter_command.dart 73          FlutterCommand.run
+package:flutter_tools/src/commands/run.dart 92                    RunCommand.run.<async>
+dart:async                                                        _SyncCompleter.complete
+package:flutter_tools/src/dart/pub.dart 46                        pubGet.<async>
+===== asynchronous gap ===========================
+dart:async                                                        _asyncThenWrapperHelper
+package:flutter_tools/src/commands/run.dart                       RunCommand.run
+package:args/command_runner.dart 176                              CommandRunner.runCommand.<fn>
+dart:async                                                        Future.Future.sync
+package:args/command_runner.dart 129                              CommandRunner.runCommand
+package:flutter_tools/src/runner/flutter_command_runner.dart 209  FlutterCommandRunner.runCommand
+package:args/command_runner.dart 103                              CommandRunner.run.<fn>
+dart:async                                                        Future.Future.sync
+package:args/command_runner.dart 103                              CommandRunner.run
+package:flutter_tools/src/runner/flutter_command_runner.dart 170  FlutterCommandRunner.run
+package:flutter_tools/executable.dart 81                          main.<async>.<fn>.<async>
+===== asynchronous gap ===========================
+package:stack_trace                                               Chain.capture
+package:flutter_tools/executable.dart 75                          main.<async>
+
+## flutter doctor
+
+[✓] Flutter (on Mac OS, channel alpha)
+    • Flutter at /Users/kyorohiro/tools/git/flutter
+    • Framework revision d5deea4 (22 hours ago), engine revision ce3b454
+
+[✓] Android toolchain - develop for Android devices (Android SDK 23.0.2)
+    • Android SDK at /usr/local/opt/android-sdk
+    • Platform android-23, build-tools 23.0.2
+    • Java(TM) SE Runtime Environment (build 1.8.0_74-b02)
+
+[✓] iOS toolchain - develop for iOS devices (Xcode 7.2.1)
+    • XCode at /Applications/Xcode.app/Contents/Developer
+    • Xcode 7.2.1, Build version 7C1002
+
+[✓] Atom - a lightweight development environment for Flutter
+    • Atom installed; Flutter plugin version 0.2.1
+
