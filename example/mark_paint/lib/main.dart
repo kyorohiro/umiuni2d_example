@@ -22,7 +22,7 @@ class GameWidget extends SingleChildRenderObjectWidget {
     builder.useTestCanvas = true;
     TinyGameRoot root = new TinyGameRoot(400.0, 300.0);
     TinyStage stage = builder.createStage(root);
-    //stage.start();
+//    stage.start();
     stage.root.addChild(new PrimitiveTest(builder, stage));
     return (stage as TinyFlutterStage);
   }

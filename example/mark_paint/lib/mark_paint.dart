@@ -21,6 +21,8 @@ class PrimitiveTest extends TinyDisplayObject {
 
   double i = 1.0;
   void onPaint(TinyStage stage, TinyCanvas canvas) {
+//    print("--");
+
     i+=0.1;
     TinyPaint p = new TinyPaint();
     p.color = new TinyColor.argb(0x55, 0xff, 0x44, 0x44);

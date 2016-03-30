@@ -37,11 +37,11 @@ class MyListViewInfo extends LittleUIScrollerInfo {
           a=0x66;
         }
         if (i % 3 == 0) {
-          obj = new LittleUIObject(100.0, 100.0, backgroundColor: new TinyColor.argb(0xff, 0xff, a, a));
+          obj = new LittleUIObject(100.0, 100.0, backgroundColor: new TinyColor.argb(0x20+0xaa*(j+i)~/(xx+yy), 0xff, a, a));
         } else if (i % 3 == 1) {
-          obj = new LittleUIObject(100.0, 100.0, backgroundColor: new TinyColor.argb(0xff, a, 0xff, a));
+          obj = new LittleUIObject(100.0, 100.0, backgroundColor: new TinyColor.argb(0x20+0xaa*(j+i)~/(xx+yy), a, 0xff, a));
         } else {
-          obj = new LittleUIObject(100.0, 100.0, backgroundColor: new TinyColor.argb(0xff, a, a, 0xff));
+          obj = new LittleUIObject(100.0, 100.0, backgroundColor: new TinyColor.argb(0x20+0xaa*(j+i)~/(xx+yy), a, a, 0xff));
         }
         obj.mat.translate(j*100.0, i * 100.0, 0.0);
         parent.body.addChild(obj);
