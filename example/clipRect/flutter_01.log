@@ -1,0 +1,89 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter stop --device-id 00c887e085c82514
+
+## exception
+
+FileSystemException: writeFrom failed, path = '' (OS Error: Broken pipe, errno = 32)
+
+dart:io                                                           _StdSink.writeln
+package:flutter_tools/src/base/logger.dart 34                     StdoutLogger.printError
+package:flutter_tools/src/globals.dart 18                         printError
+package:flutter_tools/src/base/process.dart 132                   _runWithLoggingSync
+package:flutter_tools/src/base/process.dart 81                    runCheckedSync
+package:flutter_tools/src/ios/plist_utils.dart 21                 getValueFromFile
+package:flutter_tools/src/application_package.dart 91             IOSApp.IOSApp.fromBuildConfiguration
+package:flutter_tools/src/application_package.dart 132            ApplicationPackageStore.forConfigs.<async>
+===== asynchronous gap ===========================
+dart:io                                                           _StdSink.writeln
+package:flutter_tools/src/base/logger.dart 34                     StdoutLogger.printError
+package:flutter_tools/src/globals.dart 18                         printError
+package:flutter_tools/src/base/process.dart 132                   _runWithLoggingSync
+package:flutter_tools/src/base/process.dart 81                    runCheckedSync
+package:flutter_tools/src/ios/plist_utils.dart 21                 getValueFromFile
+package:flutter_tools/src/application_package.dart 91             IOSApp.IOSApp.fromBuildConfiguration
+package:flutter_tools/src/application_package.dart 132            ApplicationPackageStore.forConfigs.<async>
+===== asynchronous gap ===========================
+dart:io                                                           _StdSink.writeln
+package:flutter_tools/src/base/logger.dart 34                     StdoutLogger.printError
+package:flutter_tools/src/globals.dart 18                         printError
+package:flutter_tools/src/base/process.dart 132                   _runWithLoggingSync
+package:flutter_tools/src/base/process.dart 81                    runCheckedSync
+package:flutter_tools/src/ios/plist_utils.dart 21                 getValueFromFile
+package:flutter_tools/src/application_package.dart 91             IOSApp.IOSApp.fromBuildConfiguration
+package:flutter_tools/src/application_package.dart 132            ApplicationPackageStore.forConfigs.<async>
+===== asynchronous gap ===========================
+dart:async                                                        Future.Future.microtask
+package:flutter_tools/src/application_package.dart                ApplicationPackageStore.forConfigs
+package:flutter_tools/src/runner/flutter_command.dart 66          FlutterCommand.downloadApplicationPackages.<async>
+===== asynchronous gap ===========================
+dart:async                                                        Future.Future.microtask
+package:flutter_tools/src/runner/flutter_command.dart             FlutterCommand.downloadApplicationPackages
+package:flutter_tools/src/commands/stop.dart 24                   StopCommand.runInProject.<async>
+===== asynchronous gap ===========================
+dart:async                                                        Future.Future.microtask
+package:flutter_tools/src/commands/stop.dart                      StopCommand.runInProject
+package:flutter_tools/src/runner/flutter_command.dart 129         FlutterCommand._run.<async>
+dart:async                                                        _SyncCompleter.complete
+package:flutter_tools/src/device.dart 68                          DeviceManager.getDevices.<async>
+dart:async                                                        _SyncCompleter.complete
+package:flutter_tools/src/device.dart 51                          DeviceManager.getDeviceById.<async>
+dart:async                                                        _SyncCompleter.complete
+package:flutter_tools/src/device.dart 74                          DeviceManager.getAllConnectedDevices.<async>
+===== asynchronous gap ===========================
+dart:async                                                        _asyncThenWrapperHelper
+package:flutter_tools/src/runner/flutter_command.dart             FlutterCommand._run
+package:flutter_tools/src/runner/flutter_command.dart 73          FlutterCommand.run
+package:args/command_runner.dart 176                              CommandRunner.runCommand.<fn>
+dart:async                                                        Future.Future.sync
+package:args/command_runner.dart 129                              CommandRunner.runCommand
+package:flutter_tools/src/runner/flutter_command_runner.dart 209  FlutterCommandRunner.runCommand
+package:args/command_runner.dart 103                              CommandRunner.run.<fn>
+dart:async                                                        Future.Future.sync
+package:args/command_runner.dart 103                              CommandRunner.run
+package:flutter_tools/src/runner/flutter_command_runner.dart 170  FlutterCommandRunner.run
+package:flutter_tools/executable.dart 81                          main.<async>.<fn>.<async>
+===== asynchronous gap ===========================
+package:stack_trace                                               Chain.capture
+package:flutter_tools/executable.dart 75                          main.<async>
+
+## flutter doctor
+
+[✓] Flutter (on Mac OS, channel alpha)
+    • Flutter at /Users/kyorohiro/tools/git/flutter
+    • Framework revision d5deea4 (2 days ago), engine revision ce3b454
+
+[✓] Android toolchain - develop for Android devices (Android SDK 23.0.2)
+    • Android SDK at /usr/local/opt/android-sdk
+    • Platform android-23, build-tools 23.0.2
+    • Java(TM) SE Runtime Environment (build 1.8.0_74-b02)
+
+[✓] iOS toolchain - develop for iOS devices (Xcode 7.2.1)
+    • XCode at /Applications/Xcode.app/Contents/Developer
+    • Xcode 7.2.1, Build version 7C1002
+
+[✓] Atom - a lightweight development environment for Flutter
+    • Atom installed; Flutter plugin version 0.2.1
+
