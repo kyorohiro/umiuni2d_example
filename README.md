@@ -1,7 +1,6 @@
 ## Umiuni2D
 https://github.com/kyorohiro/umiuni2d
 
-
 ## LICENSE
 ### greendog.mp3 is following site & license
   https://soundcloud.com/ethanhein/green-dog-disquiet0125-junto360blues
